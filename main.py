@@ -1,13 +1,16 @@
-#1.1 implement a recursive function to caluculate the factorial of a given number
-def fact_rec(n):
-  if n == 0 or n == 1:
-    return 1
-  else:
-    return n * fact_rec(n - 1)
+i
+def linear_search_product(product_list, target_product):
+    indices = []
+    for i, product in enumerate(product_list):
+        if product == target_product:
+            indices.append(i)
+    return indices
 
-
-number = 2
-
-res = fact_rec(number)
-
-print("The  factorial of {} is {}.".format(number, res))
+# Example usage:
+products = ["apple", "banana", "apple", "orange", "apple"]
+target = "apple"
+result = linear_search_product(products, target)
+if result:
+    print(f"The product '{target}' was found at indices: {result}")
+else:
+    print(f"The product '{target}' was not found in the list.")
